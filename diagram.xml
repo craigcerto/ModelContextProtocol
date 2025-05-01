@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Model Context Protocol Flow Between Application and Central Platform</text>
+  
+  <!-- Boxes for the main components -->
+  <rect x="100" y="100" width="300" height="400" rx="10" ry="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" />
+  <rect x="600" y="100" width="300" height="400" rx="10" ry="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" />
+  
+  <!-- Component Labels -->
+  <text x="250" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">Application</text>
+  <text x="750" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e7d32">Central AI Platform</text>
+  
+  <!-- Application Components -->
+  <rect x="125" y="160" width="250" height="50" rx="5" ry="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1" />
+  <text x="250" y="190" font-family="Arial" font-size="14" text-anchor="middle">CentralAIClient</text>
+  
+  <rect x="125" y="220" width="250" height="50" rx="5" ry="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1" />
+  <text x="250" y="250" font-family="Arial" font-size="14" text-anchor="middle">AppContextManager</text>
+  
+  <rect x="125" y="280" width="250" height="50" rx="5" ry="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1" />
+  <text x="250" y="310" font-family="Arial" font-size="14" text-anchor="middle">Tool Registry</text>
+  
+  <rect x="125" y="340" width="250" height="50" rx="5" ry="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1" />
+  <text x="250" y="370" font-family="Arial" font-size="14" text-anchor="middle">API Endpoints</text>
+  
+  <rect x="125" y="400" width="250" height="50" rx="5" ry="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1" />
+  <text x="250" y="430" font-family="Arial" font-size="14" text-anchor="middle">Business Logic & Data</text>
+  
+  <!-- Central AI Platform Components -->
+  <rect x="625" y="160" width="250" height="50" rx="5" ry="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" />
+  <text x="750" y="190" font-family="Arial" font-size="14" text-anchor="middle">Context Registry</text>
+  
+  <rect x="625" y="220" width="250" height="50" rx="5" ry="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" />
+  <text x="750" y="250" font-family="Arial" font-size="14" text-anchor="middle">Model Invoker (AWS Bedrock)</text>
+  
+  <rect x="625" y="280" width="250" height="50" rx="5" ry="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" />
+  <text x="750" y="310" font-family="Arial" font-size="14" text-anchor="middle">Tool Call Router</text>
+  
+  <rect x="625" y="340" width="250" height="50" rx="5" ry="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" />
+  <text x="750" y="370" font-family="Arial" font-size="14" text-anchor="middle">API Gateway</text>
+  
+  <rect x="625" y="400" width="250" height="50" rx="5" ry="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" />
+  <text x="750" y="430" font-family="Arial" font-size="14" text-anchor="middle">Authentication & Security</text>
+  
+  <!-- Flow Arrows -->
+  <!-- Context Creation -->
+  <path d="M375 175 L 600 175" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="488" y="165" font-family="Arial" font-size="12" text-anchor="middle" fill="#1976d2">1. Create Context</text>
+  
+  <!-- Model Invocation -->
+  <path d="M375 235 L 600 235" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="488" y="225" font-family="Arial" font-size="12" text-anchor="middle" fill="#1976d2">2. Invoke Model</text>
+  
+  <!-- Tool Registration -->
+  <path d="M375 295 L 600 295" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="488" y="285" font-family="Arial" font-size="12" text-anchor="middle" fill="#1976d2">3. Register Tools</text>
+  
+  <!-- Tool Call -->
+  <path d="M600 325 L 375 325" stroke="#388e3c" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,5" />
+  <text x="488" y="345" font-family="Arial" font-size="12" text-anchor="middle" fill="#388e3c">4. Tool Call</text>
+  
+  <!-- Tool Results -->
+  <path d="M375 355 L 600 355" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="488" y="375" font-family="Arial" font-size="12" text-anchor="middle" fill="#1976d2">5. Tool Results</text>
+  
+  <!-- Model Response -->
+  <path d="M600 415 L 375 415" stroke="#388e3c" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="488" y="435" font-family="Arial" font-size="12" text-anchor="middle" fill="#388e3c">6. Final Response</text>
+  
+  <!-- Data Flow on Application Side -->
+  <path d="M250 210 L 250 220" stroke="#1565c0" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M250 270 L 250 280" stroke="#1565c0" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M250 330 L 250 340" stroke="#1565c0" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M250 390 L 250 400" stroke="#1565c0" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Data Flow on Platform Side -->
+  <path d="M750 210 L 750 220" stroke="#2e7d32" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M750 270 L 750 280" stroke="#2e7d32" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M750 330 L 750 340" stroke="#2e7d32" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M750 390 L 750 400" stroke="#2e7d32" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Legend -->
+  <rect x="100" y="520" width="800" height="60" rx="5" ry="5" fill="white" stroke="#bdbdbd" stroke-width="1" />
+  <text x="120" y="545" font-family="Arial" font-size="16" font-weight="bold" fill="#333">Legend:</text>
+  
+  <line x1="200" y1="545" x2="240" y2="545" stroke="#1976d2" stroke-width="2" />
+  <text x="250" y="550" font-family="Arial" font-size="14" fill="#333">Application to Platform</text>
+  
+  <line x1="450" y1="545" x2="490" y2="545" stroke="#388e3c" stroke-width="2" />
+  <text x="500" y="550" font-family="Arial" font-size="14" fill="#333">Platform to Application</text>
+  
+  <line x1="700" y1="545" x2="740" y2="545" stroke="#388e3c" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="750" y="550" font-family="Arial" font-size="14" fill="#333">Webhook/Callback</text>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+</svg>
